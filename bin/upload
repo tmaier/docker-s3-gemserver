@@ -6,4 +6,6 @@ test "$AWS_BUCKET" != ""
 test "$AWS_ACCESS_KEY_ID" != ""
 test "$AWS_SECRET_ACCESS_KEY" != ""
 
-aws s3 cp . s3://$AWS_BUCKET/ --recursive --exclude "*" --include "*.gem" --exclude "*vendor/*"
+for file in $(find -name "*.gem"); do
+  aws s3 cp "${file}" s3://$AWS_BUCKET/gems/
+done
