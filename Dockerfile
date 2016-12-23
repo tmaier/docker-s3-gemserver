@@ -19,4 +19,6 @@ RUN \
 
 COPY bin/* /usr/local/bin/
 
+WORKDIR /workdir
+
 CMD sh
