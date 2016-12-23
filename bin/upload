@@ -7,5 +7,6 @@ test "$AWS_ACCESS_KEY_ID" != ""
 test "$AWS_SECRET_ACCESS_KEY" != ""
 
 for file in $(find -name "*.gem"); do
-  aws s3 cp "${file}" s3://$AWS_BUCKET/gems/
+  echo ${file}
+  aws s3 sync --exclude '*' --include "${file}" "$(dirname ${file})" "s3://$AWS_BUCKET/gems/"
 done
