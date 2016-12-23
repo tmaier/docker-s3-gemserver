@@ -35,7 +35,7 @@ gem 'my_secret_gem'
 Set access key and secret key using Bundler.
 
 ```bash
-$ bundle config s3://my_bucket $AWS_ACCESS_KEY_ID:$AWS_SECRET_ACCESS_KEY
+$ bundle config my_bucket $AWS_ACCESS_KEY_ID:$AWS_SECRET_ACCESS_KEY
 ```
 
 ## Environment variables
