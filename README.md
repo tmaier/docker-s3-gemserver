@@ -49,3 +49,7 @@ Following blog posts influenced this script and Dockerfile.
 
 * [Alan Cohen: Self Hosted Gem Server with Jenkins and S3](https://eng.climate.com/2014/04/10/self-hosted-gem-server-with-jenkins-and-s3/)
 * [Pull Request: RemoteFetcher private S3 repo support](https://github.com/rubygems/rubygems/pull/856)
+
+## Author
+
+[Tobias L. Maier](http://tobiasmaier.info) for [BauCloud GmbH](https://www.baucloud.com)
