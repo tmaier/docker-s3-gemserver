@@ -6,7 +6,7 @@ test "$AWS_BUCKET" != ""
 test "$AWS_ACCESS_KEY_ID" != ""
 test "$AWS_SECRET_ACCESS_KEY" != ""
 
-for file in $(find -name "*.gem"); do
+for file in $(find . -type f -not -path "*vendor/*" -name "*.gem"); do
   echo ${file}
   aws s3 sync --exclude '*' --include "${file}" "$(dirname ${file})" "s3://$AWS_BUCKET/gems/"
 done
