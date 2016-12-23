@@ -3,6 +3,8 @@
 set -e
 
 test "$BUCKET" != ""
+test "$AWS_ACCESS_KEY_ID" != ""
+test "$AWS_SECRET_ACCESS_KEY" != ""
 
 # Get existing files from Gem server
 aws s3 cp s3://$BUCKET/ . --recursive --exclude "*" --include "gems/*"
