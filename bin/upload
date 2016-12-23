@@ -2,6 +2,8 @@
 
 set -e
 
+test "$BUCKET" != ""
+
 # Get existing files from Gem server
 aws s3 cp s3://$BUCKET/ . --recursive --exclude "*" --include "gems/*"
 

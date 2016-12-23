@@ -2,4 +2,6 @@
 
 set -e
 
+test "$BUCKET" != ""
+
 aws s3 cp . s3://$BUCKET/ --recursive --exclude "*vendor/*" --include "*.gem"
