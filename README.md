@@ -29,7 +29,7 @@ Set source to S3 bucket in `Gemfile`.
 ```ruby
 source 's3://my_bucket'
 
-gem 'my secret gem'
+gem 'my_secret_gem'
 ```
 
 Set access key and secret key using Bundler.
