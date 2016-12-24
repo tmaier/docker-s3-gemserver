@@ -22,7 +22,10 @@ $ docker run --rm -v $(pwd):/workdir -e "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" -
 $ docker run --rm -e "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" -e "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY" -e "AWS_BUCKET=$AWS_BUCKET" s3-gemserver update_index
 ```
 
-### 5. Use with Bundler
+### 5. Use with Bundler (aka "the vision")
+
+This is the general idea. Rubygems supports S3, but Bundler is not there yet.
+See https://github.com/bundler/bundler/issues/4506 for details.
 
 Set source to S3 bucket in `Gemfile`.
 
