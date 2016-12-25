@@ -2,6 +2,8 @@
 
 This script and Docker imager uploads gems to S3 and creates files which make it usable as Gem Server.
 
+[![Docker Automated build](https://img.shields.io/docker/automated/tmaier/s3-gemserver.svg)](https://hub.docker.com/r/tmaier/s3-gemserver/)
+
 ## How to use in a CI/CD pipeline
 
 ### 1. Test your gem
