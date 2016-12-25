@@ -41,6 +41,12 @@ Set access key and secret key using Bundler.
 $ bundle config my_bucket $AWS_ACCESS_KEY_ID:$AWS_SECRET_ACCESS_KEY
 ```
 
+### 6. Interim solution
+
+* Create a secret directory on your bucket
+* Set the path at `$AWS_DIRECTORY` and upload the gems to that folder
+* Set the `source` URL and path in the `Gemfile`
+
 ## Environment variables
 
 * `$AWS_ACCESS_KEY_ID`
