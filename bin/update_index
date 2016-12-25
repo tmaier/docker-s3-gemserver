@@ -7,11 +7,11 @@ test "$AWS_ACCESS_KEY_ID" != ""
 test "$AWS_SECRET_ACCESS_KEY" != ""
 
 # Get existing files from Gem server
-aws s3 cp s3://$AWS_BUCKET/ . --recursive --exclude "*" --include "gems/*"
+aws s3 cp s3://$AWS_BUCKET/$AWS_DIRECTORY/ . --recursive --exclude "*" --include "gems/*"
 
 # Generate new static files
 # See: http://guides.rubygems.org/command-reference/#gem_generate_index
 gem generate_index --directory .
 
 # Sync the index files to the server. No need to sync anything in gems/ 
-aws s3 cp . s3://$AWS_BUCKET/ --recursive --exclude "gems/*"
+aws s3 cp . s3://$AWS_BUCKET/$AWS_DIRECTORY/ --recursive --exclude "gems/*"

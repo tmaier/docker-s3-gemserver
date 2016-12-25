@@ -46,6 +46,7 @@ $ bundle config my_bucket $AWS_ACCESS_KEY_ID:$AWS_SECRET_ACCESS_KEY
 * `$AWS_ACCESS_KEY_ID`
 * `$AWS_SECRET_ACCESS_KEY`
 * `$AWS_BUCKET`
+* `$AWS_DIRECTORY`
 
 ## Influencers
 Following blog posts influenced this script and Dockerfile.
