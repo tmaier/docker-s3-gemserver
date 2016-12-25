@@ -13,13 +13,13 @@ This script and Docker imager uploads gems to S3 and creates files which make it
 ### 3. Upload your gem
 
 ```bash
-$ docker run --rm -v $(pwd):/workdir -e "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" -e "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY" -e "AWS_BUCKET=$AWS_BUCKET" s3-gemserver upload
+$ docker run --rm -v $(pwd):/workdir -e "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" -e "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY" -e "AWS_BUCKET=$AWS_BUCKET" tmaier/s3-gemserver upload
 ```
 
 ### 4. Update index of Gem Server
 
 ```bash
-$ docker run --rm -e "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" -e "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY" -e "AWS_BUCKET=$AWS_BUCKET" s3-gemserver update_index
+$ docker run --rm -e "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" -e "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY" -e "AWS_BUCKET=$AWS_BUCKET" tmaier/s3-gemserver update_index
 ```
 
 ### 5. Use with Bundler (aka "the vision")
